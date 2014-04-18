@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+ 	<extension point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="com.example.launcher.LaunchDelegate"
+            id="com.example.launcher"
+            name="ExampleComposite"
+            modes="debug, run">
+      </launchConfigurationType>
+   </extension>
+   <extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="com.example.launcher"
+            icon="icons/launch.ico"
+            id="com.example.launcher.launchConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="com.example.launcher.ui.LaunchTabGroup"
+            id="com.example.launcher.launchConfigurationTabGroup"
+            type="com.example.launcher">
+      </launchConfigurationTabGroup>
+   </extension>
+</plugin>
+
